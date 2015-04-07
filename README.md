@@ -1,3 +1,19 @@
+# angularDemo
+the demo of angular explore
+
+#MEAN
+* mangodb
+* nodeJS
+
+#Run
+* $ npm install -g gulp
+* $ npm install -g bower
+* $ npm install
+* $ bower install
+* $ gulp
+
+#meanio:
+
 [![Build Status](https://travis-ci.org/linnovate/mean.svg?branch=master)](https://travis-ci.org/linnovate/mean)
 [![Dependencies Status](https://david-dm.org/linnovate/mean.svg)](https://david-dm.org/linnovate/mean)
 [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/linnovate/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
@@ -37,7 +53,7 @@ $ sudo apt-get install nodejs
 ```
 $ npm install -g gulp
 // and bower
-$ npm install -g bower 
+$ npm install -g bower
 ```
 
 ## Installation
@@ -54,7 +70,7 @@ $ cd <myApp> && npm install
 
 ### Invoke node with a task manager
 Mean supports the gulp task runner for various services which are applied on the code.
-To start you application run - 
+To start you application run -
 ```bash
 $ gulp
 ```
@@ -239,8 +255,8 @@ The file structure is similar to that of the mean project itself
 
 **Server**
 
-Packages are registered in the **app.js** 
-Defines package name, version and `mean=true` in the **package.json**   
+Packages are registered in the **app.js**
+Defines package name, version and `mean=true` in the **package.json**
 
 All of the Server side code resides in the `/server` directory.
 
@@ -255,7 +271,7 @@ All of the Server side code resides in the `/server` directory.
 
 All of the Client side code resides in the `/public` directory.
 
-    public            
+    public
     --- assets        # JavaScript/CSS/Images (not aggregated)
     --- controllers   # Angular controllers
     --- config        # Contains routing files
@@ -299,7 +315,7 @@ MEAN has 3 pre registered dependencies:
 Dependency injection allows you to declare what dependencies you require and rely on the package system to resolve all dependencies for you. Any package registered is automatically made available to anyone who would like to depend on them.
 
 Looking again at the registration example we can see that `MyPackage` depends on the `Tokens` package and can make use of its full functionality, including overriding it.
- 
+
 ```javascript
 // Example of registering the tokens package
 MyPackage.register(function(app, auth, database, Tokens) {
@@ -364,14 +380,14 @@ MyPackage.aggregateAsset('js','first.js',{global:true,  weight: -4, group: 'head
 ```
 
 >The line that gets loaded in your head.html calls the header group and injects the js you want to include first-
-> in packages/system/server/views/includes/head.html 
+> in packages/system/server/views/includes/head.html
 > <script type="text/javascript" src="/modules/aggregated.js?group=header"></script>
 
 ###Settings Object
 The settings object is a persistance object that is stored in the packages collection and allows for saving persistant information per package such as configuration options or admin settings for the package.
 
   Receives two arguments the first being the settings object the second is a callback function
-  
+
 ```javascript
 MyPackage.settings({'someSetting':'some value'}, function (err, settings) {
     // You will receive the settings object on success
@@ -511,7 +527,7 @@ Where "myPackage" is the name of your package.
 Once your package is in good shape and you want to share it with the world you can start the process of contributing it and submiting it so it can be included in the package repository.
 To contribute your package register to the network (see the section below) and run
 
-```bash 
+```bash
 $ mean register # register to the mean network (see below)
 $ cd <packages/custom/pkgName>
 $ mean publish
@@ -616,7 +632,7 @@ The production uses the widely used [combined format](https://github.com/express
 ```
 
 ## Staying up to date
-After initializing a project, you'll see that the root directory of your project is already a git repository. MEAN uses git to download and update its own code. To handle its own operations, MEAN creates a remote called `upstream`. This way you can use git as you would in any other project. 
+After initializing a project, you'll see that the root directory of your project is already a git repository. MEAN uses git to download and update its own code. To handle its own operations, MEAN creates a remote called `upstream`. This way you can use git as you would in any other project.
 
 To update your MEAN app to the latest version of MEAN
 
