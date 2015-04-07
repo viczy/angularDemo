@@ -12,7 +12,7 @@ angular.module('mean.demo')
         now: new Date()
       };
       var updateClock = function() {
-        $scope.clock.now = new Date()
+        $scope.clock.now = new Date();
       };
       setInterval(function() {
         $scope.$apply(updateClock);
