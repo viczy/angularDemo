@@ -10,6 +10,7 @@ the demo of angular explore
 * $ npm install -g bower
 * $ npm install
 * $ bower install
+* mongod --dbpath ~/data/db
 * $ gulp
 
 #meanio:
