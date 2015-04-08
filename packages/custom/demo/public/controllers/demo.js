@@ -24,6 +24,12 @@ angular.module('mean.demo')
   .controller('ParentController', ['$scope', '$filter', 'Global', 'Demo',
     function($scope, $filter, Global, Demo) {
       $scope.global = Global;
+      /*chid-controller will copy*/
+      $scope.valuecopy = 'valuecopy';
+      /*chid-controller will link*/
+      $scope.model = {
+        linkcopy: 'linkcopy'
+      };
       $scope.person = {
         name: $filter('lowercase')('Ari')
       };

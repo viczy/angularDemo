@@ -1,7 +1,8 @@
 <div class="" data-ng-controller="DemoController">
   <h2>Time: {{clock.now | date:'medium' }}</h2>
   <input ng-model="name" type="text" placeholder="Your name">
-  <h1>Hello {{ name }}</h1>
+  <h1>Hello {{ name }}</h1>   <!-- <h1> Hello <p ng-bind="name"></p> </h1>-->
+
 </div>
 
 <div class="" data-ng-controller="ParentController">
@@ -10,4 +11,6 @@
   </div>
   <h1> {{ person.name }}</h1>
 </div>
+
+<div class="" data-my-directive my-url="http://github.com" my-link-text="goto github"></div>
 
